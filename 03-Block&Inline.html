@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级元素、行内元素</title>
+    <style>
+        h2 {
+          color: #ff0000; /* 这里的#ff0000是红色的十六进制表示，您可以根据需要更改颜色值 */
+        }
+      </style>
+</head>
+<body>
+    <h2>块级元素 独占一行</h1>
+    <marquee>块级元素</marquee>
+    <h3>块级元素</h1>
+    <h4>块级元素</h2>
+    <p>块级元素</p>
+    <div>块级元素</div>
+    
+    <h2>行内元素 不独占一行</h2>
+    <input type="text">
+    <input type="password">
+    <span>行内元素</span>
+
+    <h2>块级元素里几乎什么都能写，但h1~h6不能相互嵌套，p标签里面不能写块元素</h2>
+    <div>
+        <span>行内元素</span>
+        <div>块级元素</div>
+        <input type = 'text'>
+        <div>
+            <span>行内元素</span>
+            <div>块级元素</div>
+            <input type = 'text'>
+        </div>
+    </div>
+
+    <h2>行内元素中只能写行内元素，不能写块级元素</h2>
+    <span>
+        <input type = "password">
+        <span>行内元素</span>
+    </span>
+</body>
+</html>

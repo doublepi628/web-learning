@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+    <style>
+        .color-red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-red">示例</div>
+    <form action="https://baidu.com/s" target="_blank" method="get">
+        <span>百度搜索</span>
+        <input type="text" name="wd">
+        <button>搜索</button>
+    </form>
+    <form action="https://search.jd.com/search" target="_blank">
+        <span>京东搜索</span> 
+        <input type="text" name="keyword">
+        <button>搜索</button>
+    </form>
+    <div class="color-red">常用的控件</div>
+    <form>
+        <fieldset>
+            <legend>主要信息</legend>
+            <label for="acc">账户</label>
+            <input id="acc" type="text" name="account" value="请输入账户" maxlength="10"><br>
+            <label>
+                密码
+                <input type="password" name="pwd" maxlength="20"><br>
+            </label>
+            性别 
+            <label><input type="radio" name="gender" value="male">男</label>
+            <input id="female" type="radio" name="gender" value="female"><label for="female">女</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>附加信息</legend>
+            学历<input disabled type="radio" name="edu" value="college">大学<br>
+            爱好 <input type="checkbox" name="hobby" value="sing">唱
+                <input type="checkbox" name="hobby" value="dance">跳
+                <input type="checkbox" name="hobby" value="rap">rap
+                <input type="checkbox" name="hobby" value="basketball" checked>篮球<br>
+            个人简介<br><textarea name="intro" cols="40" rows="10"></textarea><br>
+            籍贯<select name="place">
+                <option value="beijing">北京</option>
+                <option value="tianjin">天津</option>
+                <option value="shanghai" selected>上海</option>
+            </select><br><br>
+        </fieldset><br>
+        <!--隐藏域，用来防止非法注册-->
+        <input type="hidden" name="from" value="yushaohan">
+        <input type="submit" value="确认">
+        <input type="reset" value="重置">
+        <!--不写type默认是submit，就不是一个普通按钮了-->
+        <button type="button">检测账户是否被注册</button>
+    </form>
+</body>
+</html>
