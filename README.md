@@ -1,8 +1,10 @@
 # Web Front-end Development Learning Notes
 
-> author: doublepi
-> blog: [doublepi.top](https://doublepi.top)
-> mail: [22373354@buaa.edu.cn](22373354@buaa.edu.cn)
+> **author**: doublepi
+> 
+> **blog**: [doublepi.top](https://doublepi.top)
+> 
+> **mail**: [22373354@buaa.edu.cn](22373354@buaa.edu.cn)
 
 ## Introduction
 
