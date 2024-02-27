@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS行内样式</title>
+    <!--这里连接外部样式-->
+    <link rel="stylesheet" href="./15-Styles.css">
+    <!--这里是内部样式-->
+    <style>
+        /* css的注释只能这样写 */
+        /* 展开风格 */
+        h2 {
+            color:red;
+            font-size: 30px;
+        }
+        /* 紧凑风格 */
+        h2 {color:red;font-size:30px;}
+        img {
+            width: 300px;
+            height: 100px;
+        }
+        div {
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>这是只有HTML的世界</h1>
+    <!--这里是行内样式-->
+    <h1 style="color: green;
+               font-size: 50px;">欢迎来到CSS的世界</h1>
+    
+    <h2>我这里没有定义样式啊？哦，原来是内部样式。</h2>
+    <img src="./sources/background0.jpg"><br><br>
+    <div>注意，上图的样式是300&times;100的，不是200&times;100的，说明<span style="color: red;">后来者居上</span>，即参考head里的顺序</div>
+    <h2 style="color: blue;">我是一个蓝色的h2标签</h1>
+    <div>为什么会有蓝色的h2标签呢？因为行内样式优先级大于内部样式</div><br>
+    <div>总结：三种样式优先级 行内样式>内部样式=外部样式</div>
+</body>
+</html>

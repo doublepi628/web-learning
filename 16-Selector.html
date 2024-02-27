@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /* 通配选择器 */
+        * {color: orange;font-size: 40px;}
+        /* 元素选择器 */
+        h2 {color: chocolate;}
+        div {
+            color:black;
+            font-size: 20px;
+        }
+        /* 类选择器 */
+        .selector {
+            font-size: 30px;
+        }
+        /* id选择器 */
+        #summary {
+            font-size: 30px;
+            color: brown;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>学习CSS第二关:选择器</h1>
+    <h2 class="selector">通配选择器</h2>
+    <div>通配选择器匹配全部的元素</div>
+    <h2 class="selector">元素选择器</h2>
+    <div>元素选择器匹配对应的的元素</div>
+    <h2 class="selector">类选择器</h2>
+    <div>类选择器匹配属于该类的元素</div>
+    <h2 id="summary">总结</h2>
+    <div>匹配优先级与顺序无关</div>
+</body>
+</html>
