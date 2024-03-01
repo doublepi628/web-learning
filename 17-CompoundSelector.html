@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+    <style>
+        /*
+        优先级格式（a，b，c）
+        a: ID选择器个数
+        b: 类、伪类、属性选择器个数
+        c:元素、伪元素选择器个数
+        鼠标放在选择器上面，可以看到选择器的优先级
+        */
+        p.active#big {
+            color: black !important; /*important 强制的优先级最高，仅针对选择器的这一个元素*/
+        }
+        .steady {
+            color: blue;
+        }
+        .active {
+            color: greenyellow;
+        }
+        /*这就是一个交集选择器*/
+        p.active {
+            color: grey;
+        }
+        /*并集选择器用逗号连接*/
+        .mouse,#big, #orange {
+            font-size: 20px;
+        }
+        /*后代选择器 都是可以嵌套的，不过多介绍*/
+        ul li {
+            color: brown;
+        }
+        /*子代选择器 都是可以嵌套的，不过多介绍*/
+        div > a {
+            color: pink;
+        }
+        /*兄弟选择器*/
+        hr+p {
+            color: antiquewhite;
+        }
+        hr~p{
+            font-size: 10px;
+        }
+        /*属性选择器 [title^=]选开头 [title$=]选结尾 [title*=]选中间*/
+        [title="attribute"]{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!--交集选择器：-->
+    <!--只和style里面的定义顺序有关，靠后的优先级高，和这里的出现顺序无关-->
+    <h2 class="active steady">大学生ysh</h2>
+    <h2 class="active">中学生ysh</h2>
+    <hr>
+    <p>在hr后紧紧相邻的兄弟</p>
+    <p>这是p下面紧紧相邻的兄弟了</p>
+    <p title="attribute">这是一个有属性的文字</p>
+    <!--这里优先级又出现异常了，可能交集的优先吧-->
+    <p class="active" id="big">老鼠big</p>
+    <p class="active" id="orange">老鼠orange</p>
+    <li>abc</li>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <a>d</a>
+    </ul>
+    <div>
+        <a>1</a>
+        <a>2</a>
+        <p>
+            <a>
+                3
+            </a>
+            <div>
+                <a>4</a>
+            </div>
+        </p>
+    </div>
+</body>
+</html>

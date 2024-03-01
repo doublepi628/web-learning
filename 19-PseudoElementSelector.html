@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        .t1::first-letter {
+            color: red;
+            font-size: 25px;
+        }
+        .t2::first-line {
+            background-color: yellow;
+        }
+        .t3::selection {
+            background-color: green;
+            color: orange;
+        }
+        input::placeholder {
+            color: skyblue;
+        }
+        p::before {
+            content: "$";
+            color: brown;
+        }
+        p::after {
+            content: ".00";
+        }
+    </style>
+</head>
+<body>
+    <div class="t1">伪元素选择器用来选择元素的特殊位置</div>
+    <div class="t2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus illum quam, eaque quibusdam minima id asperiores? Quasi, vero inventore.</div>
+    <div class="t3">试着用光标选中我</div>
+    <input type="text" placeholder="请输入用户名">
+    <p>199</p>
+    <p>100</p>
+    <p>121</p>
+</body>
+</html>

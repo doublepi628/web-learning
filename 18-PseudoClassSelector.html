@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+    <style>
+        /*伪类：元素特殊状态的一种描述*/
+        /*访问过的a元素*/
+        a {font-size: 15px;}
+        a:link {color: orange;}
+        /*没访问过的a元素*/
+        a:visited {color: brown;}
+        /*鼠标悬浮在a元素*/
+        a:hover{color:yellow}
+        /*鼠标点下a元素没拿起来的时候*/
+        a:active{font-size: 20px;color:bisque;}
+        div:hover{color:blueviolet}
+        input:focus{color:brown;background-color: antiquewhite;}
+        select:focus{background-color: blue;}
+        div>p:first-child{color:red;}
+        div>p:last-child{color:green;}
+        /*nth-child内容是an+b的形式*/
+        div>p:nth-child(4){color:pink;}
+        div>p:first-of-type{font-size: 25px;}
+        /*特殊情况，下面两个不能同时看，只能先显示一个*/
+        :root{background-color: grey;}*/
+        div:empty{width:100px;height:100px;background-color:red;}
+        div>p:not(.fail/*还可以写[title^=] :first-child等等*/) {
+            font-size: 30px;
+        }
+        input:checked {width: 50px;height: 50px;}
+        input:disabled {background-color: brown;}
+        div div{
+            background-color: blanchedalmond;
+            height: 200px;
+        }
+        div:target {
+            background-color:thistle;
+        }
+        :lang(en){color:brown}
+    </style>
+</head>
+<body>
+    <a href="https://doublepi.top">去博客</a>
+    <a href="https://github.com/doublepi628">去github</a>
+    <a href="https://jd.com">去京东</a>
+    <a>点我点我</a>
+    <br>
+    <div>
+        <a>doublepi</a>
+        <a>ahahah</a>
+    </div>
+    <br>
+    <input type="text">
+    <br>
+    <select>
+        <option value="apple">苹果</option>
+        <option value="huawei">华为</option>
+    </select>
+    <div>
+        <span>各科成绩</span>
+        <!--因为第一个标签不是p，不变红但变大-->
+        <p>语文：120分</p>
+        <marquee>
+            <p>作文：40分</p>
+            <p>其余部分：80分</p>
+        </marquee>
+        <p>数学：140分</p>
+        <p>英语：135分</p>
+    </div>
+    <div></div>
+    <p class="fail">我是失败的啊啊啊</p>
+    <input type="checkbox">
+    <input type="radio" name="a&b">
+    <input type="radio" name="a&b">
+    <br><input type="text" disabled>
+    <br><input type="text"><br>
+    <a href="#1">goto</a><br>
+    <a href="#2">goto</a><br>
+    <a href="#3">goto</a><br>
+    <a href="#4">goto</a><br>
+    <a href="#5">goto</a><br>
+    <div>
+        <div id="1">
+            <div lang="en">damn m3!</div>
+        </div>
+        <br>
+        <div id="2">
+            <p>来了昂</p>
+        </div>
+        <br>
+        <div id="3">3</div>
+        <br>
+        <div id="4">4</div>
+        <br>
+        <div id="5">5</div>
+        <br>
+    </div>
+</body>
+</html>

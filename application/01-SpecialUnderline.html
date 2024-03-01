@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .theme1 p{
+            width:fit-content;
+            background: linear-gradient(to right, #ec695c, #61c454) no-repeat right bottom;
+            background-size: 0 2px;
+            transition: background-size 500ms;
+        }
+        .theme1 p:hover{
+            background: linear-gradient(to right, #ec695c, #61c454) no-repeat left bottom;
+            background-size: 100% 2px;
+        }
+        .theme2 p{
+            width:fit-content;
+            background: linear-gradient(to right, #ec695c, #61c454) no-repeat  left bottom;
+            background-size: 0 2px;
+            transition: background-size 500ms;
+        }
+        .theme2 p:hover{
+            background: linear-gradient(to right, #ec695c, #61c454) no-repeat  left bottom;
+            background-size: 100% 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="theme1">
+        <p>这里展示的是方案1</p>
+    </div>
+    <div class="theme2">
+        <p>这里展示的是方案2</p>
+    </div>
+</body>
+</html>
