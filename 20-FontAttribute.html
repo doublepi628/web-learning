@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordAttribute</title>
+    <style>
+        body {font-size:20px;}
+        .title {color:aqua; font-size:40px; font-family:黑体;}
+        /*font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];*/
+        /*注意：该标签内无法设置颜色*/
+        .text {font: italic  800 20px "Consolas","楷体"}
+        /* *-spacing 可以调整成负数值，但通常不常用*/
+        .wc-text {font: italic  800 20px "Consolas","楷体"; word-spacing: 20px;}
+        .lc-text {font: italic  800 20px "Consolas","楷体"; letter-spacing: 10px;}  
+        .big-word {font-size: 40px;}
+        .medium-word {font-size: 30px;}
+        .small-word {font-size: 20px;}
+        .small-word-va1 {font-size: 20px;background-color: orange;vertical-align: middle;}
+        .small-word-va2 {font-size: 20px;background-color: orange;vertical-align:baseline;}
+        .small-word-va3 {font-size: 20px;background-color: orange;vertical-align:bottom;}
+        .TimesNewRoman {font-family: 'Times New Roman';}
+        .Cambria {font-family: 'Cambria', '楷体';}
+        .Consolas {font-family: 'Consolas';}
+        .italic {font-style:italic;}
+        .heavy {font-weight: 700;}
+        .normal {font-weight: normal;}
+        .light {font-weight: lighter;}
+        .deco1 {text-decoration: overline;}
+        .deco2 {text-decoration: line-through dotted}
+        .deco3 {text-decoration: underline;}
+        .deco4 {text-decoration: underline wavy brown;}
+        .indent {text-indent: 40px;}
+        .align1 {text-align: center; background-color: yellowgreen;}
+        .align2 {text-align: right; background-color: skyblue;}
+        .align3 {height: 100px; line-height: 100px; background-color: yellowgreen;}
+        .align4 {height: 100px; line-height: 180px; background-color: skyblue;}
+        .block {height: 100px; background-color: skyblue;}
+        /*line-height 的值可以是 px 可以是 normal 可以是字体大小倍数（如1.5） 也可以是百分比*/
+        /*line-height 过小文字会产生重叠，且最小值是0；line-height是可以继承的，因此最好写数值；若不设置height，则height=line-height*/
+        .line-height {line-height: 50px;}
+    </style>
+</head>
+<body>
+    <!--chrome 默认字体大小：16px，最小字体大小：12px-->
+    <div class="title">字号大小</div>
+    <div class="big-word">我是第1个标签</div>
+    <div class="medium-word">我是第2个标签</div>
+    <div class="small-word">我是第3个标签</div>
+    <div>我是第4个标签</div>
+    <div class="title">字体族</div>
+    <div class="TimesNewRoman">Hello World!</div>
+    <div class="Cambria">试着打印出"Hello World!"吧</div>
+    <div class="Consolas">Hello World!</div>
+    <div class="title">字体风格</div>
+    <div class="italic">嘿嘿，我是斜的</div>
+    <em>我本身就是变斜的</em>
+    <div class="title">字体粗细</div>
+    <div class="light">我要越来越粗壮</div>
+    <div class="normal">我要越来越粗壮</div>
+    <div class="heavy">我要越来越粗壮</div>
+    <div class="title">字体复合属性</div>
+    <div class="text">为什么不打印Hello World呢？</div>
+    <div class="title">文本间距</div>
+    <div class="wc-text">hello world 是你好世界的意思</div>
+    <div class="lc-text">hello world 是你好世界的意思</div>
+    <div class="title">文本修饰</div>
+    <div class="deco1">装饰我，装饰我，装饰我</div>
+    <div class="deco2">装饰我，装饰我，装饰我</div>
+    <div class="deco3">装饰我，装饰我，装饰我</div>
+    <div class="deco4">装饰我，装饰我，装饰我</div>
+    <ins>下划我</ins><del>直接划我</del><a href="我也不知道要去哪">下划我</a>
+    <div class="title">文本缩进</div>
+    <div class="indent">首行自动缩进两个哟，首行自动缩进两个哟，首行自动缩进两个哟，首行自动缩进两个哟，首行自动缩进两个哟，首行自动缩进两个哟，首行自动缩进两个哟，不信你自己看</div>
+    <div class="title">文本对齐</div>
+    <div class="align1">我在中间</div>
+    <div class="align2">我在右侧</div>
+    <div class="align3">我在上面</div>
+    <div class="align4">我在下面</div>
+    <div class="title">行高</div>
+    <!--行高的应用场景：1.调整多行文字的行间距 2.单行文字垂直居中-->
+    <div class="line-height">我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离，我们之间远远地分离</div>
+    <div class="title">Vertical Align</div>
+    <div class="block">
+        <span class="big-word">大大大</span>
+        <span class="small-word">小小小</span>
+        <span class="small-word-va1">小小小</span>
+        <span class="small-word-va2">小小小</span>
+        <span class="small-word-va3">小小小</span>
+    </div>
+    <div>vertical-align用来制定同一行元素之间，或表格单元格内文字的垂直对齐方式</div>
+    <div>vertical-align不能控制块级元素</div>
+</body>
+</html>

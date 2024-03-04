@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Attribute</title>
+    <style>
+        table {
+            /* width color style 缺一不可*/
+            border: 2px brown solid;
+            width: 500px;
+            table-layout: fixed; /* 每个单元格宽度相同 */
+            border-spacing: 10px; /* 和html属性里的cell-spacing 类似*/
+            border-collapse: separate; /* collapse合并相邻单元格的边框，但上面标签就无效了 */
+            empty-cells: hide; /* 隐藏没有内容的单元格，但和collapse冲突*/
+            caption-side: bottom; /* 标题位置 */
+        }
+        tr > th {
+            border:2px orange solid;
+        }
+        tr > td {
+            border:2px greenyellow solid;
+        }
+        .border {
+            border:2px gold solid;
+            line-height:50px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>点名册（标题在下面版）</caption>
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>姓名（中文）</th>
+                <th>年龄（0-150）</th>
+                <th>性别（男/女）</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>ysh</td>
+                <td>20</td>
+                <td>男</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>hsy</td>
+                <td>2</td>
+                <td>女</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>shy</td>
+                <td>200</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>--------------------------</div>
+    <div class="border">我这个div也要边框！！！</div>
+</body>
+</html>
