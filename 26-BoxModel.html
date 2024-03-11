@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .title {
+            font-size: 35px;
+            color:coral;
+        }
+        .th1 {
+            /* 内容区的宽和高 */
+            width: 400px;
+            height: 300px;
+            /* 内边距 设置的背景颜色会填充内边距区域*/
+            padding: 20px;
+            /* 边框 设置的背景颜色会填充边框*/
+            border: 5px dashed cadetblue;
+            margin: 20px;
+            background-color:aliceblue;
+        }
+        .th2 {
+           min-width: 600px;
+           max-width: 800px;
+           max-height: 100px;
+           min-height: 60px;
+           background-color: aliceblue;
+        }
+        .th3 {
+            /* 只写一个style就可以生成一个边框 */
+            border-style:solid;
+            border-left-color: coral;
+            border-right-color: skyblue;
+            border-top-color:orange;
+            border-bottom-color: yellowgreen;
+            border-left-width: 15px;
+            border-right-width: 20px;
+            border-top-width: 10px;
+            border-bottom-width: 25px;
+            border-bottom-style: dotted;
+            width: 200px;
+            height: 150px;
+        }
+        .th4 {
+            width: 200px;
+            height: 150px;
+            margin:35px 25px 10px 30px;
+            background-color:yellowgreen;
+        }
+        .th5 {
+            width: 100px;
+            height: 75px;
+            margin:35px 25px 10px 30px;
+            background-color:skyblue;
+        }
+        .th6 {
+            width: 100px;
+            height: 75px;
+            margin-left:auto;
+            background-color:skyblue;
+        }
+        .th7 {
+            width: 100px;
+            height: 75px;
+            margin-top:-30px;
+            background-color:cornflowerblue;
+        }
+        .th8 {
+           min-width: 600px;
+           max-width: 800px;
+           max-height: 100px;
+           min-height: 60px;
+           background-color: aliceblue;
+           overflow: hidden;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin-bottom: 50px;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin-top: 60px;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            margin-right: 60px;
+            display: inline-block;
+        }
+        .box4 {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin-left: 50px;
+            display: inline-block;
+        }
+        #d1 {
+            width: 400px;
+            height: 400px;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            /*也可以这么写 padding: 值（可以是一个、两个、三个、四个，效果不同）*/
+            font-size: 20px;
+            background: cadetblue;
+        }
+        #d2 {
+            padding: 20px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">盒子模型</div>
+    <div class="th1">This is a `div`</div>
+    <img src="sources/image.png">
+    <div class="title">盒子的内容区</div>
+    <div class="th2">
+        1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+    </div>
+    <br><br><br><br>
+    <div class="th2">
+        1<br>1<br>1<br>1<br>
+    </div>
+    <div class="title">盒子的内边距</div>
+    <div id="d1">这是一个盒子</div>
+    <hr>
+    <!--行内元素上下内边距不能完美地设计-->
+    <span id="d2">这是一个行内元素，很容易看出来上下内边距有问题</span>
+    <br><br>
+    <div class="title">盒子的边框</div>
+    <div class="th3">盒盒盒盒盒盒盒盒盒盒</div>
+    <div class="title">盒子的外边距</div>
+    <!--上、左侧margin影响自己的位置，下、右侧margin影响兄弟的位置-->
+    <!--行内元素无法设置上下margin-->
+    <div class="th4">嘿嘿来了昂<div class="th5">嘿嘿又来了昂</div></div>
+    <div class="th6">auto的含义：能多大就多大</div>
+    <div class="th7">margin可以设置负数值</div>
+    <div class="title">margin塌陷问题</div>
+    <div class="th2">
+        <div class="th5"></div>
+    </div>
+    <span>儿子的margin会被他爹吃了，咋办？</span><br>
+    <span>解决方案：给他爹加overflow: hidden;</span>
+    <div class="th8">
+        <div class="th5"></div>
+    </div>
+    <div class="title">margin合并问题</div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <hr>
+    <div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    <span>上下合并，左右不合并，要解决这个方案可用float（其实未必要解决）</span>
+</body>
+</html>

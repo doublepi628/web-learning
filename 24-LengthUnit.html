@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Unit</title>
+    <style>
+        #d1 {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+            background-color: skyblue;
+        }
+        #d2 {
+            width: 10em;
+            height: 10em; /* 当前元素或其父元素的font-size倍数 */
+            font-size: 20px;
+            background-color: orange;
+        }
+        #d3 { 
+            width: 10rem; /* 根元素的font-size倍数 */
+            height: 10rem; /* 根元素默认情况是16px */
+            font-size: 20px; 
+            background-color: yellowgreen;
+        }
+        .inside {
+            width: 50%; /* 相对其父亲元素的百分比 */
+            height: 25%;
+            font-size: 20px;
+            background-color: blueviolet;
+        }
+        .tab {
+            font-size: 40px;
+            text-indent: 2em;
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">我是第1个div</div>
+    <div id="d2">我是第2个div</div>
+    <div id="d3">我是第3个div</div>
+    <div id="d1">
+        <div class="inside">我是第4个div</div>
+    </div>
+    <div class="tab">我的首行缩进一定为2（em的妙用）</div>
+</body>
+</html>
