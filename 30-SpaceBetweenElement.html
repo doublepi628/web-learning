@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Between Element</title>
+    <style>
+        .div0fs {
+            font-size: 0px;
+        }
+        .divbgc {
+            background-color: yellow;
+        }
+        span {
+            font-size: 20px;
+        }
+        .s1 {
+            background-color: red;
+        }
+        .s2 {
+            background-color: green;
+        }
+        .s3 {
+            background-color: blue;
+        }
+        .img-vt {
+            vertical-align: top;
+        }
+        .img-vbo {
+            vertical-align: bottom;
+        }
+        .img-vba {
+            vertical-align: baseline;
+        }
+        .img-block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="s1">first element</span>
+        <span class="s2">second element</span>
+        <span class="s3">third element</span>
+        <br>
+        <span>显然上面这些元素之间是有间隔的</span>
+        <br>
+        <span class="s1">first element</span><span class="s2">second element</span><span class="s3">third element</span>
+        <br>
+        <span>我写在一行就没有间隔了，这是因为div在每个元素之间加了个空格？</span>
+    </div>
+    <div class="div0fs">
+        <span class="s1">first element</span>
+        <span class="s2">second element</span>
+        <span class="s3">third element</span>
+        <br>
+        <span>如果把div的字体大小设置为0，这个问题便解决了，我们更推荐这样做</span>
+    </div>
+    <div class="divbgc">
+        <img src="./sources/image.png" height="100px">xg
+    </div>
+    <span>图片底下出现了一块幽灵空白，你看那俩字x和g，x和图同底，g和div同底，看来图片在给字让步</span>
+    <div class="divbgc">
+        <img class="img-vt" src="./sources/image.png" height="100px">xg
+    </div>
+    <span>让字体向上对齐，就不会出现这种情况</span>
+    <div class="divbgc">
+        <img class="img-vbo" src="./sources/image.png" height="100px">xg
+    </div>
+    <span>让字体向父元素底部对齐，就不会出现这种情况</span>
+    <div class="divbgc">
+        <img class="img-vba" src="./sources/image.png" height="100px">xg
+    </div>
+    <span>让字体向父元素基线对齐，就会出现这种情况</span>
+    <div class="divbgc">
+        <img class="img-block" src="./sources/image.png" height="100px">
+    </div>
+    <span>如果只有一张图片，那就把它转换为块元素</span>
+</body>
+</html>

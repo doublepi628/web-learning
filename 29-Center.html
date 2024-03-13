@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center</title>
+    <style>
+        .outer1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            overflow: hidden; /* 父亲不抢儿子的*/
+            /* 下面的这些代码帮助span居中 */
+            text-align: center;
+            line-height: 400px;
+        }
+        .outer2 {
+            width: 400px;
+            height: 400px;
+            line-height: 400px;
+            font-size: 0px; /* 绝对的居中 */
+            background-color: skyblue;
+            text-align: center;
+        }
+        .inner1 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: auto;
+            margin-top: 100px; /* （外部高度 - 内部高度）/ 2 */
+            text-align: center;
+            line-height: 200px; /* 行高：一行文字的高度*/
+        }
+        span {
+            background-color: orange;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer1">
+        <div class="inner1">doublepi</div>
+    </div>
+    <br>
+    <div class="outer1">
+        <span>doublepi</span>
+    </div>
+    <br>
+    <div class="outer2">
+        <span>doublepi</span>
+        <img src="./sources/ant.gif">
+    </div>
+</body>
+</html>

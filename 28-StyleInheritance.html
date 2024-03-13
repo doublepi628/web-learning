@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleInheritance</title>
+    <style>
+        #d1 {
+            height: 300px;
+            background-color: orange;
+            padding: 20px;
+        }
+        #d2 {
+            height: 200px;
+            padding: 20px;
+            background-color: yellowgreen;
+            font-style: italic;
+            font-size: 30px;
+            color:white;
+        }
+        #d3 {
+            /* 继承得来的样式实际上优先级最低 */
+            height: 150px;
+            background-color: coral;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">我继承了父亲的字体样式，能继承的仅与字体有关，背景等不可继承</div>
+        </div>
+    </div>
+</body>
+</html>
