@@ -68,5 +68,7 @@
     <span>浮动后不独占一行，可设置宽高</span><br>
     <span>浮动后的所有margin都是可完美设置的</span><br>
     <span>浮动后不会像行内块一样被当作文本处理</span><br>
+    <span>浮动的原则：同一父容器中，要么全浮动，要么全不</span><br>
+    <span>解决浮动问题可以采用clear参数，在这里不过多介绍，最优方案是给父亲元素加.parent::after{content="";display:block;clear:both;}</span><br>
 </body>
 </html>

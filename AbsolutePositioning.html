@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: aliceblue;
+            border: 1px solid #000;
+            padding: 20px;
+            position: relative;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: green;
+            /* 开启绝对定位就会脱离文档流，变成定位元素 */
+            position: absolute;
+            /* 定位参考点在它的包含块 */
+            /* 没脱离文档流的元素，父元素是包含块 */
+            /* 脱离文档流的元素，第一个开启定位的祖先元素，是他的包含块 */
+            /* 子绝父相：子元素开启绝对定位，父元素开启相对定位*/
+            top: 120px;
+            left: 120px;
+        }
+        .box3 {
+            background-color: blue;
+        }
+        .outer:hover .box2 {
+            top:20px;
+            left:20px;
+            transition: 0.5s all linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <span>绝对定位不能开启浮动，可以开启margin（但不建议）</span><br>
+    <span>光标移动，块2发生变化</span>
+</body>
+</html>

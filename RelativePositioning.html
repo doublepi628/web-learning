@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Positioning</title>
+    <style>
+        .outer {
+            width: 500px;
+            background-color: aliceblue;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+        .box1 {
+            background-color: red;
+            position: relative;
+            top: 10px;
+        }
+        .box2 {
+            background-color: green;
+            /* 相对定位：相对自己原来的位置*/
+            position: relative;
+            left: 200px;
+        }
+        .box3 {
+            background-color: blue;
+            position: relative;
+            left: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <span>不推荐和浮动、margin同时使用（虽然可以）</span><br>
+    <span>相对定位可以用来微调，不会脱离文档流</span><br>
+    <span>相对定位最常用的场景是与绝对定位搭配</span><br>
+</body>
+</html>
