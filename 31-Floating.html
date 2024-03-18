@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            
+            height: 400px;
+            background-color: yellowgreen;
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+        span {
+            font-size: 30px;
+        }
+        .fl {
+            width: fit-content;
+            height: fit-content;
+            background-color: green;
+        }
+        .fl::first-letter{
+            font-size: 60px;
+            float: left;
+        }
+        .bg {
+            background-color:aliceblue;
+            height: fit-content;
+            padding: 10px;
+        }
+        .box {
+            height: 50px;
+            padding: 10px;
+            font-size: 25px;
+        }
+        .box1 {
+            background-color: yellow;
+        }
+        .box2 {
+            background-color: orange;
+            float: left;
+            
+        }
+        .box3 {
+            background-color: coral;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./sources/image.png">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi placeat iusto rem hic optio dicta maxime molestiae pariatur nihil ad eveniet voluptatem architecto commodi repellendus dolor quo assumenda aperiam, odio maiores harum iste cumque blanditiis laudantium. Sint mollitia enim ipsum ex incidunt, cum libero minus obcaecati consectetur necessitatibus inventore quo accusantium culpa fugiat quis! Facere facilis suscipit fugiat deserunt?
+    </div>
+    <br>
+    <div>
+        <div class="fl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nisi placeat iusto rem hic optio dicta maxime molestiae pariatur nihil ad eveniet voluptatem architecto commodi repellendus dolor quo assumenda aperiam, odio maiores harum iste cumque blanditiis laudantium. Sint mollitia enim ipsum ex incidunt, cum libero minus obcaecati consectetur necessitatibus inventore quo accusantium culpa fugiat quis! Facere facilis suscipit fugiat deserunt?</div>
+    </div>
+    <div class="bg">
+        <div class="box box1"> hello </div>
+        <div class="box box2"> hello </div>
+        <div class="box box3"> hello </div>
+    </div>
+    <span>浮动后不独占一行，可设置宽高</span><br>
+    <span>浮动后的所有margin都是可完美设置的</span><br>
+    <span>浮动后不会像行内块一样被当作文本处理</span><br>
+</body>
+</html>
