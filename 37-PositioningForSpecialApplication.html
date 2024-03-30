@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning For Special Application</title>
+    <style>
+        .outer {
+            width: 500px;
+            height: 200px;
+            position: relative;
+            background-color: aliceblue;
+        }
+        .inner1 {
+            padding: 20px;
+            border: 3px solid blue;
+            font-size: 20px;
+            background-color: aqua;
+            position: absolute;
+            /* 同时写left&right可以用来左右流出空间*/
+            left: 100px;
+            right: 100px;
+            text-align: center;
+        }
+        .inner2 {
+            
+            width: 300px;
+            height: 100px;
+            background-color: aqua;
+            font-size: 20px;
+            text-align: center;
+            line-height: 100px;
+            /* 水平垂直居中的一种解决方案 */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">
+            这是一个绝对定位块
+        </div>
+    </div>
+    <br>
+    <div class="outer">
+        <div class="inner2">
+            这是一个绝对定位块
+        </div>
+    </div>
+</body>
+</html>
