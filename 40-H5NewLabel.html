@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5 New Label</title>
+</head>
+<body>
+    <header>
+        <h1>abababa</h1>
+    </header>
+    <nav>
+        <a href="./01-HelloWorld.html">你好世界</a>
+        <a href="./02-LayoutLabel.html">布局标签</a>
+    </nav>
+    <section>
+        <h3>aaaaa</h3>
+        <p>aAaAa</p>
+        <p>AaAaA</p>
+    </section>
+    <aside style="float: right;">
+        <nav>
+            <ul>
+                <li><a href="./01-HelloWorld.html">你好世界</a></li>
+                <li><a href="./02-LayoutLabel.html">布局标签</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <span>手机电量</span>
+    <meter max="100" min="0" value="50" low="20" high="80" optimum="100"></meter>
+    <br>
+    <span>当前进度</span>
+    <progress max="100" value="40"></progress>
+    <footer><h1>bababa</h1></footer>
+    <input type="text" list="mydata">
+    <button>搜索</button>
+    <datalist id="mydata">
+        <option value="a">a</option>
+        <option value="ab">ab</option>
+        <option value="b">b</option>
+    </datalist>
+    <details>
+        <summary>hello bro</summary>
+        <p>bro hello</p>
+    </details>
+    <ruby>
+        <span>魑魅魍魉</span>
+        <rt>chimeiwangliang</rt>
+    </ruby><br>
+    <span>Hello Im <mark>Shaohan Yu</mark></span>
+    <form action="">
+        账号：   <input type="text" name="account" placeholder="请输入账号" required autofocus autocomplete="on" pattern="\w{6}"><br>
+        密码：   <input type="password" name="pwd" placeholder="请输入密码" required><br>
+        性别：   <input type="radio" value="male" name="gender" required>男
+                <input type="radio" value="female" name="gender">女<br>
+        爱好：   <input type="checkbox" value="sing" name="hobby" required>唱
+                <input type="checkbox" value="dance" name="hobby">跳
+                <input type="checkbox" value="rap" name="hobby">rap
+                <input type="checkbox" value="basketball" name="hobby">篮球<br>
+        其他：   <textarea></textarea><br>
+        <button>提交</button>
+    </form>
+    <form>
+        邮箱：<input type="email" name="email" placeholder="仅可输入邮箱"><br>
+        网址：<input type="url" name="url" placeholder="仅可输入网址"><br>
+        数值：<input type="number" name="number" step="3" max="10" min="1"><br>
+        搜索：<input type="search" name="search" placeholder="输入的部分可删除"><br>
+        电话：<input type="tel" name="tel" placeholder="只作用在手机上"><br>
+        范围：<input type="range" name = "range" max="100" min="0" value="33"><br>
+        颜色：<input type="color" name="color"><br>
+        日期：<input type="date" name="date"><br>
+        时间：<input type="time" name="time"><br>
+        日期时间：<input type="datetime-local" name="time"><br>
+        <button>提交</button>
+    </form>
+    <video src="./sources/video.mp4" width="600px" controls muted autoplay loop preload="metadata"></video>
+    <div>静音状态可自动播放，视频循环播放</div>
+    <div>音频标签省略（用处比较少），需要的时候再看，大致与视频相似</div>
+</body>
+</html>

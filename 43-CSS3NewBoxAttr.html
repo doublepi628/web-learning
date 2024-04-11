@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .topic {
+            width:100vw;
+            height: fit-content;
+            background-color: grey;
+            padding: 10px;
+            margin: 5px;
+
+        }
+        .title {
+            font-size: 20px;
+        }
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            padding: 5px;
+            border: 5px solid black;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            padding: 5px;
+            border: 5px solid black;
+            box-sizing: border-box; /*指的是盒子的大小实际就是200*200，paddingborder从里面取*/
+        }
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            resize: both; /* resize可调整大小 */
+            overflow: hidden; /* 必须和overflow同时用 */
+        }
+        .box4 {
+            width: 400px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color:bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 10px 10px; /* 水平 垂直*/
+        }
+        .box6 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 10px 10px darkgray; /* 水平 垂直*/
+        }
+        .box7 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 10px 10px 10px; /* 水平 垂直*/
+        }
+        .box8 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 10px 10px 10px darkgoldenrod; /* 水平 垂直*/
+        }
+        .box9 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 10px 10px 10px 10px darkgoldenrod; /* 水平 垂直*/
+        }
+        .box10 {
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            margin: 0 auto;
+            margin-top: 20px;
+            box-shadow: 0px 0px 50px darkgoldenrod inset; /* 水平 垂直*/
+        }
+        .box11 {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            margin: 0 auto;
+            margin-top: 20px;
+            transition: 0.3s linear all;
+            position: relative;
+            box-shadow: 0px 0px 20px whitesmoke inset;
+            top: 0;
+            left: 0;
+        }
+        .box11:hover {
+            top: -1px;
+            box-shadow: 0px 0px 5px black;
+        }
+        .box12 {
+            width: 200px;
+            height: 200px;
+            font-style: 20px;
+            background-color: yellowgreen;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="topic">
+        <div class="title">box-sizing</div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <div class="topic">
+        <div class="title">resize</div>
+        <div class="box3">
+            <div class="box4">1234567890</div>
+        </div>
+    </div>
+    <div class="topic">
+        <div class="title">box-shadow</div>
+        <div class="box5">box-shadow2个参数</div>
+        <div class="box6">box-shadow3个参数</div>
+        <div class="box7">box-shadow3个参数</div>
+        <div class="box8">box-shadow4个参数</div>
+        <div class="box9">box-shadow5个参数</div>
+        <div class="box10">内部阴影</div>
+        <div class="box11">鼠标放我身上</div>
+    </div>
+    <div class="topic">
+        <div class="title">opacity</div>
+        <div class="box12">看看我透明吗</div>
+    </div>
+</body>
+</html>
