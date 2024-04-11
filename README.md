@@ -12,13 +12,17 @@ Since early 2024, as a sophomore student, I have started learning `front-end dev
 
 ## Structure
 
-### Html✅
+### Html4✅
 
 from 01-14
 
-### CSS📚
+### CSS2✅
 
-from 15-
+from 15-39
+
+### Html5&CSS3📚
+
+from 40-
 
 ### JS👀
 coming soon...
